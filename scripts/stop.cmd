@@ -1,1 +1,1 @@
-docker-compose stop && docker-compose rm -f
+cd patroni && docker-compose stop && docker-compose rm -f && cd ..
