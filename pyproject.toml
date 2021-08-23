@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "billing"
+version = "0.0.1"
+description = "Billing"
+authors = ["Radmir Arslanov <radmir.a.arslanov@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+alembic = "^1.6.5"
+fastapi = "^0.67.0"
+pydantic = "^1.8.2"
+psycopg2 = "^2.9.1"
+psycopg2-binary ="^2.9.1"
+SQLAlchemy = "^1.4.22"
+SQLAlchemy-Utils = "^0.37.8"
+uvicorn = "^0.14.0"
+mypy = "^0.910"
+
+[tool.poetry.dev-dependencies]
+autoflake = "^1.4"
+black = "^21.7b0"
+flake8 = "^3.9.2"
+isort = "^5.9.2"
+pytest = "^6.2.4"
+requests = "^2.26.0"
+
+[tool.poetry.extras]
+pgsql = ["psycopg2-binary", "SQLAlchemy", "SQLAlchemy-Utils"]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+line_length = 78
+
+[tool.black]
+line-length = 78
+target-version = ['py38']
+extend-exclude = '^/patroni'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = 3.8
+exclude = "alembic|patroni"
