@@ -20,7 +20,7 @@ Run following depending on your OS.
 For Linux systems use files with "sh" postfix, like ```format.sh```,
 for Windows use cmd-files - ```start.cmd```.
 
-###Preferable scripts launch sequence
+**Preferable scripts launch sequence**
 1. format
 2. start
 3. alembic (run only on the first launch)
