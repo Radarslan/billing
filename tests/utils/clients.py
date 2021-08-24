@@ -36,7 +36,7 @@ def create_random_client_dict() -> Dict[str, Any]:
         "wallet_balance": round(
             uniform(
                 float(data_validation.wallet_minimum_amount) + 10.00,
-                float(data_validation.wallet_maximum_amount) / 10000000,
+                float(data_validation.transfer_maximum_amount),
             ),
             data_validation.wallet_maximum_number_of_decimal_places,
         ),
